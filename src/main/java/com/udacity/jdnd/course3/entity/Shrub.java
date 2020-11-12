@@ -9,6 +9,8 @@ public class Shrub extends Plant{
     private long height;
     private long width;
 
+    public Shrub() {}
+
     public Shrub(long height, long width) {
         this.height = height;
         this.width = width;

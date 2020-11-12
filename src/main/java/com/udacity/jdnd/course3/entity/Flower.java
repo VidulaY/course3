@@ -10,6 +10,7 @@ public class Flower extends Plant {
 
     private String color;
 
+    public Flower() {}
     public Flower(String color) {
         this.color = color;
     }
