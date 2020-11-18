@@ -22,7 +22,7 @@ public class Delivery {
     private LocalDateTime deliveryTime;
 
     @Type(type = "yes_no")
-    private Boolean completed;
+    private Boolean completed = false;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "delivery", cascade = CascadeType.ALL)
     private List<Plant> plants;
@@ -41,6 +41,7 @@ public class Delivery {
     public void setPlants(List<Plant> plants) {
         this.plants = plants;
     }
+
     public Long getId() {
         return id;
     }
@@ -73,4 +74,7 @@ public class Delivery {
         this.deliveryTime = deliveryTime;
     }
 
+    public void setCompleted(boolean b) {
+        this.completed = true;
+    }
 }
